@@ -9,15 +9,9 @@ interface Props {
 }
 
 const DropdownSection: React.FC<Props> = ({ option }) => {
-  const {
-    WrappedContent,
-    id,
-    optionDimensions,
-    contentDimensions,
-    optionCenterX,
-  } = option;
+  const { WrappedContent, id, contentDimensions, optionCenterX } = option;
 
-  const { updateOptionProps, cachedId } = useDropdown();
+  const { cachedId } = useDropdown();
 
   const isActive = cachedId === id;
 
@@ -25,7 +19,7 @@ const DropdownSection: React.FC<Props> = ({ option }) => {
     const contentWidth = contentDimensions?.width || 0;
 
     return optionCenterX - contentWidth / 2;
-  }, [contentDimensions?.width, optionCenterX]);
+  }, [contentDimensions, optionCenterX]);
 
   return (
     <Container
