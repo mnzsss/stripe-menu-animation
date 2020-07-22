@@ -1,4 +1,4 @@
-<h1 align="center">Strapi Menu Animation 👋</h1>
+<h1 align="center">Stripe Menu Animation 👋</h1>
 
 <p align="center">
 <img src="./github/demo.gif"/>
